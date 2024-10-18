@@ -1,6 +1,6 @@
 <div>
 
-    <div class="card bg-base-100 w-96 shadow-lg">
+    <div class="card bg-white w-96 shadow-lg">
         <div class="card-body">
             <h2 class="card-title">Random dad joke</h2>
             <div class="prose my-4">

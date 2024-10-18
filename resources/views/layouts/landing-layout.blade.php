@@ -22,17 +22,28 @@
 <body class="bg-base-100">
     <div class="container mx-auto">
         <div class="navbar bg-base-100">
-            <a class="btn btn-ghost text-xl">
-                <!-- <img src="{{ asset('images/notmichal.png') }}" alt="Michal Unfiltered" class="w-10 h-10 rounded-full"> -->
-                <span class="inline-block bg-black text-white px-2 py-1">Michal</span> Unfiltered
-            </a>
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl">
+                    <!-- <img src="{{ asset('images/notmichal.png') }}" alt="Michal Unfiltered" class="w-10 h-10 rounded-full"> -->
+                    Michal
+                    <span class="inline-block bg-black text-white px-2 py-1">Unfiltered</span> 
+                </a>
+            </div>
+
+            <div class="flex-none">
+                <a href="{{ config('app.social_media.twitter') }}" target="_blank">
+                    <x-fab-x-twitter class="w-6 h-6" />
+                </a>
+            </div>
         </div>
 
-        <main class="mt-12">
+        <main class="mt-12 mb-32">
             {{ $slot }}
         </main>
+
     </div>
 
+    <x-footer />
 </body>
 
 </html>

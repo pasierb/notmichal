@@ -123,4 +123,20 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Social Media Configuration
+    |--------------------------------------------------------------------------
+    |
+    | This section contains configuration for various social media platforms
+    | used in the application. Add or modify entries as needed.
+    |
+    */
+
+    'social_media' => [
+        'twitter' => env('TWITTER_URL', 'https://twitter.com/notMichal_'),
+        'linkedin' => env('LINKEDIN_URL', 'https://www.linkedin.com/in/mpasierbski/'),
+        'youtube' => env('YOUTUBE_URL', 'https://www.youtube.com/@notMichal'),
+    ],
 ];
