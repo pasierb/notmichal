@@ -17,6 +17,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="bg-base-100">
@@ -50,6 +51,7 @@
     </div>
 
     <x-footer />
+    @livewireScripts
 </body>
 
 </html>

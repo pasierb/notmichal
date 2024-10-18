@@ -9,7 +9,7 @@
     </div>
 
     <div class="flex justify-center mt-12">
-        <x-dad-joke :joke="$joke" />
+        <livewire:random-dad-joke />
     </div>
 
     <section class="py-24 sm:py-32">

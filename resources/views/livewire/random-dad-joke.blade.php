@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-actions justify-end">
-            <button class="btn btn-primary">Another one</button>
+            <button wire:click="selectNewJoke" class="btn btn-primary">Another one</button>
         </div>
     </div>
 </div>
