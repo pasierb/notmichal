@@ -14,6 +14,10 @@
 
     <section class="py-24 sm:py-32">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Thoughts & Ramblings</h2>
+        <p class="mt-4 text-center text-gray-600">
+            aka blog posts
+        </p>
+
         <x-blog-post-list :blogPosts="$blogPosts" />
     </section>
 </x-landing-layout>
