@@ -10,6 +10,8 @@ Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
 Route::get('/blog/{blogPost:slug}', [BlogPostController::class, 'show'])->name('blog.show');
 Route::get('/blog', [BlogPostController::class, 'index'])->name('blog.index');
 
+Route::view('/about', 'about')->name('about');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
