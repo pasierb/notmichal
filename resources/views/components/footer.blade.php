@@ -89,7 +89,9 @@
                 -->
             </div>
             <div class="mt-10 xl:mt-0">
-                <h3 class="text-sm font-semibold leading-6 text-gray-900">Subscribe to my newsletter</h3>
+                <h3 class="text-sm font-semibold leading-6 text-gray-900">
+                    Unfiltered content right to your inbox
+                </h3>
                 <p class="mt-2 text-sm leading-6 text-gray-600">
                     Weekly<sup>*</sup> dose of thoughts, ideas, and dad jokes, sent straight to your inbox.
                 </p>
