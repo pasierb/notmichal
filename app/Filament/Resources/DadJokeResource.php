@@ -13,6 +13,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\FileUpload;
 
 class DadJokeResource extends Resource
 {
@@ -30,6 +31,13 @@ class DadJokeResource extends Resource
                     ->label('Joke Content')
                     ->placeholder('Enter your dad joke here')
                     ->hint('Max 65,535 characters')
+                    ->columnSpanFull(),
+                FileUpload::make('image')
+                    ->label('Joke Image')
+                    ->directory('uploads/posts') // Directory where images will be stored
+                    ->visibility('public')
+                    ->placeholder('Upload an image for the joke')
+                    ->hint('Max 10MB')
                     ->columnSpanFull(),
             ]);
     }

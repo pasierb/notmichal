@@ -8,5 +8,6 @@ class DadJoke extends Model
 {
     protected $fillable = [
         'text_content',
+        'image',
     ];
 }

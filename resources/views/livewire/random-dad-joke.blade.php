@@ -5,7 +5,13 @@
                 <h2 class="card-title">Random dad joke</h2>
 
                 <div class="py-4 px-6 text-lg rounded-lg font-mono my-4 bg-black text-white">
-                    {!! Illuminate\Support\Str::markdown($joke->text_content) !!}
+                    @if ($joke->image)
+                        <img src="{{ $joke->image }}" alt="Joke Image" class="w-full h-auto mb-4">
+                    @endif
+
+                    <div>
+                        {!! Illuminate\Support\Str::markdown($joke->text_content) !!}
+                    </div>
                 </div>
 
                 <div class="card-actions justify-end">
