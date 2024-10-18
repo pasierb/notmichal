@@ -6,7 +6,7 @@
 
                 <div class="py-4 px-6 text-lg rounded-lg font-mono my-4 bg-black text-white">
                     @if ($joke->image)
-                        <img src="{{ $joke->image }}" alt="Joke Image" class="w-full h-auto mb-4">
+                        <img src="{{ asset($joke->image) }}" alt="Joke Image" class="w-full h-auto mb-4">
                     @endif
 
                     <div>
