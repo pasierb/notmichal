@@ -4,9 +4,14 @@
             <div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
                 @foreach ($blogPosts as $blogPost)
                     <article class="relative isolate flex flex-col gap-8 lg:flex-row">
-                        <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                            <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
-                                alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                        <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-video lg:w-64 lg:shrink-0">
+                            @if ($blogPost->cover_image_path)
+                                <img src="{{ asset($blogPost->cover_image_path) }}"
+                                    alt="{{ $blogPost->title }}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                            @else
+                                <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80"
+                                    alt="" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                            @endif
                             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
                         </div>
                         <div>

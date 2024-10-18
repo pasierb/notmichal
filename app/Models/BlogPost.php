@@ -24,6 +24,8 @@ class BlogPost extends Model
         'slug',
         'content_path',
         'published_at',
+        'cover_image_path',
+        'excerpt',
     ];
 
     protected $casts = [

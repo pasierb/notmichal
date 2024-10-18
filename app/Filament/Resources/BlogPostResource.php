@@ -26,10 +26,12 @@ class BlogPostResource extends Resource
     {
         return $form
             ->schema([
+                TextInput::make('content_path'),
                 TextInput::make('title'),
                 TextInput::make('slug'),
-                TextInput::make('content_path'),
                 DateTimePicker::make('published_at'),
+                TextInput::make('cover_image_path'),
+                TextInput::make('excerpt'),
             ]);
     }
 
