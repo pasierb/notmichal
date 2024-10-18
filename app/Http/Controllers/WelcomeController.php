@@ -28,8 +28,9 @@ class WelcomeController extends Controller
     public function show()
     {
         $randomJoke = \App\Models\DadJoke::inRandomOrder()->first();
+        $blogPosts = \App\Models\BlogPost::published()->take(15)->get();
 
-        return view('welcome', ['joke' => $randomJoke]);
+        return view('welcome', ['joke' => $randomJoke, 'blogPosts' => $blogPosts]);
     }
 
     /**

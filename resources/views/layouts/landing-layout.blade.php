@@ -22,15 +22,21 @@
 <body class="bg-base-100">
     <div class="container mx-auto">
         <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a class="btn btn-ghost text-xl">
+            <div class="navbar-start">
+                <a class="btn btn-ghost text-xl" href="{{ route('welcome') }}">
                     <!-- <img src="{{ asset('images/notmichal.png') }}" alt="Michal Unfiltered" class="w-10 h-10 rounded-full"> -->
                     Michal
-                    <span class="inline-block bg-black text-white px-2 py-1">Unfiltered</span> 
+                    <span class="inline-block bg-black text-white px-2 py-1 -rotate-2">Unfiltered</span>
                 </a>
             </div>
 
-            <div class="flex-none">
+            <div class="navbar-center">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-end">
                 <a href="{{ config('app.social_media.twitter') }}" target="_blank">
                     <x-fab-x-twitter class="w-6 h-6" />
                 </a>
