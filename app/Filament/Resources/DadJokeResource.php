@@ -25,7 +25,7 @@ class DadJokeResource extends Resource
     {
         return $form
             ->schema([
-                Textarea::make('text_content')
+                Forms\Components\MarkdownEditor::make('text_content')
                     ->required()
                     ->maxLength(65535)
                     ->label('Joke Content')
