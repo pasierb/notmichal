@@ -34,11 +34,9 @@
                                         {{ $blogPost->title }}
                                     </a>
                                 </h3>
-                                <p class="mt-5 text-md leading-6 text-gray-600">Illo sint voluptas. Error voluptates
-                                    culpa
-                                    eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed
-                                    exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris
-                                    incididunt.</p>
+                                <div class="mt-5 text-md leading-6 text-gray-600 prose">
+                                    {!! Illuminate\Support\Str::markdown($blogPost->excerpt) !!}
+                                </div>
                             </div>
                         </div>
                     </article>

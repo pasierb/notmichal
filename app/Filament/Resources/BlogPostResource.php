@@ -31,7 +31,7 @@ class BlogPostResource extends Resource
                 TextInput::make('slug'),
                 DateTimePicker::make('published_at'),
                 TextInput::make('cover_image_path'),
-                TextInput::make('excerpt'),
+                Forms\Components\MarkdownEditor::make('excerpt'),
             ]);
     }
 
