@@ -3,7 +3,7 @@
         <img src="{{ asset('images/notmichal.png') }}" alt="Michal Unfiltered" class="w-full max-w-xs mx-4 rounded-full">
     </div>
 
-    <div class="mt-8">
+    <div class="mt-8 px-4 mx-auto">
         <x-employment-history />
     </div>
 </x-landing-layout>

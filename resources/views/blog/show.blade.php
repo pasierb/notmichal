@@ -9,7 +9,7 @@
                 class="w-full max-w-2xl aspect-video object-cover rounded-lg mb-8">
         @endif
     </div>
-    <div class="prose mx-auto">
+    <div class="prose mx-auto px-4">
         <h1 class="text-5xl font-bold">{{ $blogPost->title }}</h1>
         <div class="flex items-center gap-x-4 text-normal">
             <time datetime="{{ $blogPost->published_at }}" class="text-gray-500">
