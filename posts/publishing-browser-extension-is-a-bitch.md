@@ -1,3 +1,8 @@
+---
+title: "Publishing a Browser Extension is a Bitch"
+cover_image_path: "/images/posts/publishing-browser-extension-is-a-bitch.png"
+---
+
 **TL;DR;** Publishing to the Chrome Web Store is a pain in the ass. Even flipping a visibility flag takes days to "review."
 
 **Context**: I Made a Browser Extension to Beat my Doomscrolling

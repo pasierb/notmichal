@@ -20,8 +20,26 @@
         </div>
         <div>
             @if ($blogPost->content_path)
-                {!! Illuminate\Support\Str::markdown(file_get_contents(base_path('posts/' . $blogPost->content_path))) !!}
+                @php
+                    $content = file_get_contents(base_path('posts/' . $blogPost->content_path));
+                    $parsedContent = Spatie\YamlFrontMatter\YamlFrontMatter::parse($content);
+                    $markdownContent = $parsedContent->body();
+                @endphp
+                {!! Illuminate\Support\Str::markdown($markdownContent, ['html_input' => 'allow']) !!}
             @endif
         </div>
+
+        <div class="mt-24 text-sm text-center">
+            <p>
+                If you enjoyed this post, consider subscribing to my newsletter for more insights on indie hacking,
+                marketing, and product development. Every two weeks you get a summary of what's happening here and some
+                dad jokes.
+            </p>
+
+            <iframe src="https://notmichal.substack.com/embed" width="480" height="150"
+            class="mx-auto"
+                frameborder="0" scrolling="no"></iframe>
+        </div>
     </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </x-landing-layout>
