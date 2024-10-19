@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJGVJ1HHN1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+        if (localStorage.getItem('cookie_consent') === 'true') {
+            // Google tag (gtag.js)
+            var script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-CJGVJ1HHN1";
+            script.async = true;
+            document.head.appendChild(script);
 
-        function gtag() {
-            dataLayer.push(arguments);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-CJGVJ1HHN1');
         }
-        gtag('js', new Date());
-
-        gtag('config', 'G-CJGVJ1HHN1');
     </script>
 
     @if (isset($seo))
@@ -86,6 +90,7 @@
     </div>
 
     <x-footer />
+    <x-cookie-consent />
     @livewireScripts
 </body>
 

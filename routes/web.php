@@ -23,3 +23,13 @@ Route::view('/about', 'about')->name('about');
 // });
 
 // require __DIR__.'/auth.php';
+
+Route::post('/accept-cookies', function () {
+    session(['cookie_consent' => true]);
+    return response()->json(['message' => 'Cookies accepted']);
+});
+
+Route::post('/reject-cookies', function () {
+    session(['cookie_consent' => false]);
+    return response()->json(['message' => 'Cookies rejected']);
+});
