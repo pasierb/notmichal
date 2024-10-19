@@ -1,4 +1,8 @@
 <x-landing-layout>
+    <x-slot name="seo">
+        {!! seo()->for($blogPost) !!}
+    </x-slot>
+
     <div class="flex justify-center mx-auto">
         @if ($blogPost->cover_image_path)
             <img src="{{ asset($blogPost->cover_image_path) }}" alt="{{ $blogPost->title }}"
